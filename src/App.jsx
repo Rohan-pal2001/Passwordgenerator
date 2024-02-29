@@ -38,7 +38,7 @@ function App() {
         value={password}
         className='outline-none md:mb-4 w-5/6 py-4 rounded-md px-3 '
         placeholder='SetPassword'
-        readOnly
+        
         ref={passwordref}
         
         />
