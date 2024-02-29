@@ -24,10 +24,10 @@ function App() {
     passwordref.current?.select()
      window.navigator.clipboard.writeText(password)
   },[password])
-  useEffect(()=>{
-    passwordgenerator()
+  // useEffect(()=>{
+  //   passwordgenerator()
     
-  },[length,numberallow,characterallow,passwordgenerator])
+  // },[length,numberallow,characterallow,passwordgenerator])
   return (
     <>
     <div className='w-full max-w-auto  shadow-md rounded-lg 
@@ -37,7 +37,7 @@ function App() {
       className=' md:mb-9 flex-shadow  rounded-lg overflow-hidden mb-8  '>
         <input type="text"
         // value={password}
-        
+
         className='outline-none md:mb-4 w-5/6 py-4 rounded-md px-3 '
         placeholder='SetPassword'
         
