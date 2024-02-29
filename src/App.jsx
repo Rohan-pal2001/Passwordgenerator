@@ -1,5 +1,6 @@
 import { useState,useCallback, useEffect, useRef } from 'react'
 import './App.css'
+import { Input } from 'postcss'
 
 function App() {
   const [length, setlength] = useState(8)
@@ -30,6 +31,9 @@ function App() {
   // },[length,numberallow,characterallow,passwordgenerator])
   return (
     <>
+    <div>
+      <input type="text" />
+    </div>
     <div className='w-full max-w-auto  shadow-md rounded-lg 
     px-4 py-3 my-80 bg-slate-500'>
       <h1 className='text-white text-center py-3 font-semibold text-3xl'> Password Generator</h1>
