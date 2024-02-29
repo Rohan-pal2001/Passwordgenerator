@@ -7,18 +7,19 @@ function App() {
   const [characterallow,setcharacterallow]=useState(false)
   const [password,setpassword]=useState("")
   const passwordref=useRef("")
-  const passwordgenerator=useCallback(()=>{
-    let pass=""
-    let str="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijlkmnopqrstuvwxyz"
-    if(numberallow) str+="0123456789"
-    if(characterallow) str+="~`!@#$%^&*()_+{}[}]':;<?/>.|"
-    for (let i = 1; i <=length; i++) {
-      let char=Math.floor(Math.random()*str.length+1)
-      pass+=str.charAt(char)
+  // const passwordgenerator=useCallback(()=>{
+  //   let pass=""
+  //   let str="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijlkmnopqrstuvwxyz"
+  //   if(numberallow) str+="0123456789"
+  //   if(characterallow) str+="~`!@#$%^&*()_+{}[}]':;<?/>.|"
+  //   for (let i = 1; i <=length; i++) {
+  //     let char=Math.floor(Math.random()*str.length+1)
+  //     pass+=str.charAt(char)
       
-    }
-    setpassword(pass)
-  },[length,numberallow,characterallow,setpassword])
+  //   }
+ //   setpassword(pass)
+  //},[length,numberallow,characterallow,setpassword])
+
   const copypasswordtoclipboard=useCallback(()=>{
     passwordref.current?.select()
      window.navigator.clipboard.writeText(password)
@@ -35,7 +36,8 @@ function App() {
       <div
       className=' md:mb-9 flex-shadow  rounded-lg overflow-hidden mb-8  '>
         <input type="text"
-        value={password}
+        // value={password}
+        
         className='outline-none md:mb-4 w-5/6 py-4 rounded-md px-3 '
         placeholder='SetPassword'
         
